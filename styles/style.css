@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@300;400&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  color: #e2e3f0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(313.14deg, #020216 -1.84%, #050933 27.46%, #050A35 47.07%, #000013 91.11%);
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 80%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.waves {
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  max-height: 35vh;
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 15vw;
+  position: absolute;
+  margin-left: 8rem;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: -4rem;
+  height: 40vh;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  letter-spacing: 3%;
+  color: #b0b2d6;
+}
+
+.header--main {
+  color: #e2e3f0;
+  font-size: 4.5rem;
+}
+
+.header--main-span {
+  color: #268CC0;
+}
+
+.header--sub {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+.header--cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header--cta select {
+  margin: 0 1rem;
+  padding: 0 1rem;
+}
+
+.menu {
+  position: fixed;
+  margin-top: 3rem;
+  width: 95vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu__item {
+  padding: 0 3vw;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  color: #e2e3f0;
+  text-decoration: none;
+}
+
+@-webkit-keyframes fadeInFocus {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(2rem);
+            filter: blur(2rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes fadeInFocus {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(2rem);
+            filter: blur(2rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+  }
+  40% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+  }
+  40% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  color: #c0c3df;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4 {
+  color: #e2e3f0;
+  font-family: 'Comfortaa';
+  font-weight: 300;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+/*# sourceMappingURL=style.css.map */

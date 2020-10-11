@@ -1,0 +1,107 @@
+ *,
+ *::after,
+ *::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: inherit;
+ }
+
+ html { 
+    font-size: 62.5%; // define what one rem is (10px)
+
+   @include respond(tab-land) {
+      font-size: 56.25%;
+   }
+   @include respond(tab-port) {
+      font-size: 50%;
+   }
+   @include respond(phone) {
+      font-size: 40%;
+   }
+   @include respond(big-desktop) {
+      font-size: 80%;
+   }
+   color: $white;
+   
+   height: 100%;
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background: linear-gradient(313.14deg, #020216 -1.84%, #050933 27.46%, #050A35 47.07%, #000013 91.11%);
+}
+
+ body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   box-sizing: border-box;
+ }
+
+ .waves {
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-height: 35vh;
+   
+ }
+
+ .weather {
+    display: flex;
+    flex-direction: row;
+    width: 15vw;
+    position: absolute;
+    margin-left: 8rem;
+    top: 0;
+    left: 0;
+}
+
+ .header {
+    @include absCenter;
+    margin-top: -4rem;
+    height: 40vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    letter-spacing: 3%;
+    color: darken($color: $white, $amount: 15%);
+    &--main {
+       color: $white;
+       font-size: 4.5rem;
+      &-span {
+         color: $color-primary
+      }
+    }
+    &--sub {
+       font-size: 1.8rem;
+      line-height: 3.2rem;
+    }
+    &--cta{
+       display: flex;
+       justify-content: flex-end;
+       & select {
+          margin: 0 1rem;
+          padding: 0 1rem;
+       }
+    }
+ }
+
+ .menu {
+    position: fixed;
+    margin-top: 3rem;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+   &__item {
+      padding: 0 3vw;
+      text-transform: uppercase;
+      letter-spacing: 5%;
+      color: $white;
+      text-decoration: none;
+   }
+ }
+
