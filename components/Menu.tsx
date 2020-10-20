@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import WeatherForecast from './WeatherForecast';
 
-const Menu = () =>{
+const Menu: React.FC = () =>{
     return(
     <menu className='menu'>
         <WeatherForecast />

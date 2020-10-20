@@ -1,7 +1,7 @@
 import React from 'react'
 import DropDownSearch from './DropDownSearch'
 
-const Header = () => {
+const Header: React.FC = () => {
     return(
     <header className='header'>
         <h1 className='header--main'>Explore <span className='header--main-span'>the Hague!</span></h1>

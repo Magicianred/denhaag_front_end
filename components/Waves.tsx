@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Waves extends React.Component{
-    render() {
+const Waves: React.FC = () => {
     return (
         <svg viewBox="0 0 1440 328" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1442.51 0C884.477 393.083 502.568 -70.6256 -3 17.2228V149V331H1442.51C1442.51 331 1452.09 362.761 1442.51 0Z" fill="url(#paint0_linear)" fillOpacity="0.25"/>
@@ -23,7 +22,6 @@ class Waves extends React.Component{
         </defs>
         </svg>
     )
-    }
 }
 
 export default Waves;

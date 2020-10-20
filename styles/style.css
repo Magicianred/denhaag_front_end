@@ -11,11 +11,10 @@
 html {
   font-size: 62.5%;
   color: #e2e3f0;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: linear-gradient(313.14deg, #020216 -1.84%, #050933 27.46%, #050A35 47.07%, #000013 91.11%);
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 @media (max-width: 75em) {
@@ -43,36 +42,24 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #00042479;
+  background-image: linear-gradient(312.99deg, #020216 2.84%, #000424 44.95%, #000013 96.46%);
 }
 
 .waves {
   z-index: -1;
   position: fixed;
-  bottom: 0;
+  bottom: -1rem;
   left: 0;
   width: 100vw;
   max-height: 35vh;
-}
-
-.weather {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 15vw;
-  position: absolute;
-  margin-left: 8rem;
-  top: 0;
-  left: 0;
 }
 
 .header {
@@ -81,9 +68,9 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  margin-top: -4rem;
-  height: 40vh;
-  width: 40%;
+  height: 50vh;
+  width: 55%;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,14 +86,15 @@ body {
 
 .header--main {
   color: #e2e3f0;
-  font-size: 4.5rem;
+  font-size: 6.5rem;
 }
 
 .header--main-span {
-  color: #268CC0;
+  color: #F8A748;
 }
 
 .header--sub {
+  width: 80%;
   font-size: 1.8rem;
   line-height: 3.2rem;
 }
@@ -127,8 +115,8 @@ body {
 
 .menu {
   position: fixed;
-  margin-top: 3rem;
-  width: 95vw;
+  padding: 2rem 5rem;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,12 +129,121 @@ body {
           justify-content: flex-end;
 }
 
+.menu .weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 15vw;
+  position: absolute;
+  margin-left: 8rem;
+  left: 0;
+}
+
 .menu__item {
-  padding: 0 3vw;
+  position: relative;
+  margin: 0 3vw;
   text-transform: uppercase;
   letter-spacing: 5%;
   color: #e2e3f0;
   text-decoration: none;
+}
+
+.menu__item:after {
+  content: '';
+  position: absolute;
+  top: 6;
+  left: 0;
+  right: 0;
+  display: block;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  border-radius: 1px;
+  border-bottom: 2px solid #F8A748;
+  width: 0;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.menu__item:hover {
+  color: #F8A748;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.menu__item:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 100%;
+}
+
+.menu__item:active {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #F8A748;
+          text-decoration-color: #F8A748;
+}
+
+.menu__scrolled {
+  background-color: rgba(35, 196, 230, 0.3);
+}
+
+.category {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.category h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3rem;
+  top: -5rem;
+}
+
+.category__item {
+  position: relative;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(226, 227, 240, 0.05);
+  width: 30%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.category__item--title {
+  margin-bottom: 1rem;
+  color: #268CC0;
+}
+
+.category__item button {
+  padding: 0.5rem 2rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
 }
 
 @-webkit-keyframes fadeInFocus {
@@ -241,8 +338,7 @@ h1 {
 
 h1, h2, h3, h4 {
   color: #e2e3f0;
-  font-family: 'Comfortaa';
-  font-weight: 300;
+  font-weight: 350;
 }
 
 .u-center-text {

@@ -1,0 +1,15 @@
+export interface Art {
+    address: string,
+    contact_email?:string,
+    contact_phone?: string,
+    covid_factor: string,
+    created_at: Date,
+    description?: string,
+    district: string,
+    id: string,
+    name: string,
+    price_category: string,
+    type: string,
+    url?: string,
+    votes: number,
+}

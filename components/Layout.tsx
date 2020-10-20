@@ -1,21 +1,16 @@
 import * as React from "react";
 import Head from 'next/head';
 import Menu from "./Menu";
-import Waves from "./Waves";
 
-const Layout = props => (
+const Layout: React.FC = props => (
     <div className="Layout" >
     <Head>
         <title>What to do in the Hague?</title>
     </Head>
     <Menu/>
-      <div className="Content">
+      <main className="Content">
         {props.children}
-      </div>
-      <div className='waves'>
-        <Waves/>
-      </div>
-    
+      </main>
     </div>
   );
   

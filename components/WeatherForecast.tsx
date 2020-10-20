@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WeatherForecast = () => {
+const WeatherForecast: React.FC = () => {
     return(
     <div className='weather'>
         <p className='weather__text'>The weather today: <span>28 °C</span></p>

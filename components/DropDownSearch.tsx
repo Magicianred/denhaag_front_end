@@ -4,7 +4,7 @@ const handleCategorySelect = () => {
     
 }
 
-const DropDownSearch = () => {
+const DropDownSearch: React.FC = () => {
     return(
     <select name='category selector' onChange={handleCategorySelect}>
         <option value='art'>Art</option>

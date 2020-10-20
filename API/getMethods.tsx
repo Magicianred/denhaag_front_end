@@ -14,9 +14,10 @@ export async function test(){
 }
 
 export async function getCategory(category){
-  return axios.get(baseUrl, header)
+  return axios.get(`${baseUrl}/v1/${category}`)
   .then(response => {
-      console.log(response);
+    if(response.status == 200) return response.data
+    else console.log(response)
   })
   .catch((err) => {
       console.log(err)
