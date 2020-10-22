@@ -49,6 +49,16 @@
    
  }
 
+ .squares {
+    z-index: -1;
+    position: fixed;
+    bottom: -1rem;
+    left: 0;
+    width: 100vw;
+    max-height: 35vh;
+   
+ }
+
 
  .header {
     @include absCenter;
@@ -137,6 +147,83 @@
    }
  }
 
+ .about {
+    display: block;
+    margin: 23vh 10vw;
+    width: 60vw;
+    @include respond(tab-port) { 
+      width: 75vw; 
+   }
+   &__title {
+      text-transform: uppercase;
+      color: $highlight;
+      font-size: 4vw;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      &--bg{
+         margin-top: -0.7em;
+         margin-left: 0.2em;
+         color: $color-primary;
+         text-transform: lowercase;
+         position: absolute;
+         width: 40%;
+         font-size: 6vw;
+         font-weight: 800;
+         opacity: 0.08;
+         letter-spacing: 0.1em;
+         line-height: 1em;
+      }
+   }
+   &__description {
+      margin-top: 2%;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      padding: 1em 2em 1em 0;
+   }
+ }
+
+ .tiles {
+    display: flex;
+    width: 100vw;
+   @include respond(tab-port) { display: block; }
+   &__browse {
+      width: 70vw;
+      height: 25vh;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba($color: $color-primary, $alpha: 0.9);
+      @include respond(tab-port) { 
+         width: 50vw;
+         height: 15vw; 
+      }
+      &--cta{
+         @include absCenter;
+         text-transform: uppercase;
+         font-size: 1.5em;
+         cursor: pointer;
+      }
+   }
+   &__contact {
+      width: 30vw;
+      height: 100vh;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background-color: rgba($color: $color-primary, $alpha: 0.2);
+      @include respond(tab-port) { 
+         width: 50vw;
+         height: 15vw; 
+      }
+      &--cta{
+         @include absCenter;
+         text-transform: uppercase;
+         font-size: 1.5em;
+         cursor: pointer;
+      }
+   }
+ }
+
  .category {
     @include absCenter;
     width: 70%;
@@ -151,16 +238,18 @@
       top: -5rem;
    }
    &__item {
+      border-radius: 15px;
       position: relative;
-      margin: 1rem;
+      margin: 2rem;
       padding: 1.5rem;
-      background-color: rgba($white, 0.05);
-      width: 30%;
+      background-color: rgba($color-primary, 0.15);
+      width: 25%;
       height: 220px;
       overflow: hidden;
       &--title {
          margin-bottom: 1rem;
-         color: $color-primary;
+         color: $white;
+         font-size: 1.5;
       }
       button {
          padding: 0.5rem 2rem;
