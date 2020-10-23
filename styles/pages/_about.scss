@@ -1,0 +1,105 @@
+
+ .about {
+    height: 100vh;
+    width: 100vw;
+     position: relative;
+     display: block;
+     padding: 10%;
+    &__container {
+       width: 75%;
+    }
+    &__title {
+       text-transform: uppercase;
+       color: $highlight;
+       font-size: 4vw;
+       font-weight: 700;
+       letter-spacing: 0.1em;
+       &--bg{
+          margin-top: -0.7em;
+          margin-left: 0.2em;
+          color: $color-primary;
+          text-transform: lowercase;
+          position: absolute;
+          width: 40%;
+          font-size: 6vw;
+          font-weight: 800;
+          opacity: 0.08;
+          letter-spacing: 0.1em;
+          line-height: 1em;
+       }
+    }
+    &__description {
+       margin-top: 2%;
+       font-size: 1.2em;
+       line-height: 1.6em;
+       padding: 1em 2em 1em 0;
+    }
+  }
+
+  
+ .tiles {
+    position: relative;
+    display: flex;
+    width: 100vw;
+   @include respond(tab-port) { display: block; }
+   &__browse {
+      // width: 70%;
+      // height: 25vh;
+      // bottom: 0;
+      // left: 0;
+      // position: absolute;
+      // background-color: rgba($color: $color-primary, $alpha: 0.9);
+      @include respond(tab-port) { 
+         width: 50%;
+         height: 15vw; 
+      }
+      &--cta{
+         // @include absCenter;
+         text-transform: uppercase;
+         font-size: 1.5em;
+         cursor: pointer;
+      }
+   }
+   &__contact {
+      // width: 30%;
+      // height: 100vh;
+      // bottom: 0;
+      // right: 0;
+      // position: absolute;
+      // background-color: rgba($color: $color-primary, $alpha: 0.2);
+      @include respond(tab-port) { 
+         width: 50%;
+         height: 15vw; 
+      }
+      &--cta{
+         // @include absCenter;
+         text-transform: uppercase;
+         font-size: 1.5em;
+         cursor: pointer;
+      }
+   }
+ }
+
+ .square {
+    &__container {
+       width: 100vw;
+    }
+    &--light {
+       position: absolute;
+       width: 890.5px;
+       height: 580.61px;
+       left: 0;
+       top: 580px;
+       background: #268CC0;
+       transform: rotate(30deg);
+    }
+    &--dark {
+       position: absolute;
+       width: 574px;
+       height: 1355.4px;
+       left: 680.49px;
+       top: 270px;
+       background: rgba(38, 140, 192, 0.3);
+       transform: rotate(72deg);
+    }
+ }

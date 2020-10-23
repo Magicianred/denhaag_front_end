@@ -1,0 +1,36 @@
+
+ .header {
+    position: relative;
+    display: block;
+    padding: 10% 15%;
+    &__container {
+       height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-self: center;
+      letter-spacing: 3%;
+      color: darken($color: $white, $amount: 15%);
+    }
+    &--main {
+       color: $white;
+       font-size: 6.5rem;
+      &-span {
+         color: $highlight;
+      }
+    }
+    &--sub {
+       width: 80%;
+       font-size: 1.8rem;
+      line-height: 3.2rem;
+    }
+    &--cta{
+       display: flex;
+       justify-content: flex-end;
+       & select {
+          margin: 0 1rem;
+          padding: 0 1rem;
+       }
+    }
+ }
+

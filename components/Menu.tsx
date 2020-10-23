@@ -20,6 +20,9 @@ const Menu: React.FC = () =>{
         <Link href="#search">
             <a className='menu__item'onClick={handleScroll}>Search</a>
         </Link>
+        <Link href="#categories">
+            <a className='menu__item'onClick={handleScroll}>Categories</a>
+        </Link>
         <Link href="#contact">
             <a className='menu__item'onClick={handleScroll}>Contact</a>
         </Link>

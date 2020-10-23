@@ -18,7 +18,7 @@ const about: React.FC = () => (
             </Link>
         </div>
         <div className='tiles__browse'>
-            <Link href='/categories'>
+            <Link href='#categories'>
                 <h3 className='tiles__browse--cta'>&rsaquo; Browse</h3>
             </Link>
         </div>
