@@ -3,7 +3,7 @@ import DropDownSearch from './DropDownSearch'
 
 const Header: React.FC = () => {
     return(
-    <header className='header'>
+    <header className='header header__container'>
         <h1 className='header--main'>Explore <span className='header--main-span'>the Hague!</span></h1>
         <p className='header--sub'>
         Welcome to the browser of amazing freetime possibilities! You’re in one of the most beautiful cities of the Netherlands. 

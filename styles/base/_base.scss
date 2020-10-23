@@ -3,10 +3,11 @@
  *::before {
      margin: 0;
      padding: 0;
-     box-sizing: inherit;
+     box-sizing: border-box;
  }
 
  html { 
+    scroll-behavior: smooth;
     font-size: 62.5%; // define what one rem is (10px)
 
    @include respond(tab-land) {
@@ -23,15 +24,14 @@
    }
    color: $white;
    margin: 0;
-   padding: 0;
-   min-height: 100%;
-   min-width: 100%;
+   height: 100vh;
+    width: 100vw;
 }
 
  body {
+    margin: 0;
    height: 100%;
    width: 100%;
-   box-sizing: border-box;
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center;
@@ -39,37 +39,56 @@
    background-image: linear-gradient(312.99deg, #020216 2.84%, #000424 44.95%, #000013 96.46%);
  }
 
- .waves {
+ section {
+    width: 100vw;
+    height: 100vh;
+ }
+
+/*  .squares {
     z-index: -1;
     position: fixed;
     bottom: -1rem;
     left: 0;
     width: 100vw;
     max-height: 35vh;
-   
- }
-
- .squares {
-    z-index: -1;
-    position: fixed;
-    bottom: -1rem;
-    left: 0;
-    width: 100vw;
-    max-height: 35vh;
-   
- }
-
+ } */
+.square {
+   &__container {
+      width: 100vw;
+   }
+   &--light {
+      position: absolute;
+      width: 890.5px;
+      height: 580.61px;
+      left: 0;
+      top: 580px;
+      background: #268CC0;
+      transform: rotate(30deg);
+   }
+   &--dark {
+      position: absolute;
+      width: 574px;
+      height: 1355.4px;
+      left: 680.49px;
+      top: 270px;
+      background: rgba(38, 140, 192, 0.3);
+      transform: rotate(72deg);
+   }
+}
 
  .header {
-    @include absCenter;
-    height: 50vh;
-    width: 55%;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    letter-spacing: 3%;
-    color: darken($color: $white, $amount: 15%);
+    position: relative;
+    display: block;
+    padding: 10% 15%;
+    &__container {
+       height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-self: center;
+      letter-spacing: 3%;
+      color: darken($color: $white, $amount: 15%);
+    }
     &--main {
        color: $white;
        font-size: 6.5rem;
@@ -93,28 +112,29 @@
  }
 
  .menu {
-    position: fixed;
+    z-index: 10;
+    top: 0;
+    position: sticky;
     padding: 2rem 5rem;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    .weather {
-      display: flex;
-      flex-direction: row;
-      width: 15vw;
+    & > a{
+      color: $white;
+      text-decoration: none;
+    }
+    &__logo {
       position: absolute;
-      margin-left: 8rem;
-      left: 0;
+      left: 15%;
+      font-weight: 500;
   }
    &__item {
       position: relative;
       margin: 0 3vw;
       text-transform: uppercase;
       letter-spacing: 5%;
-      color: $white;
-      text-decoration: none;
-      &:after {
+      &::after {
          content: '';
          position: absolute;
          top: 6;
@@ -138,21 +158,22 @@
           }
       }
       &:active {
-         text-decoration: underline;
-         text-decoration-color: $highlight;
+         text-decoration: none;
       }
    }
    &__scrolled {
-      background-color: rgba(#23C4E6, 0.3);
+      background-color: rgba($dark-blue, 0.3);
    }
  }
 
  .about {
+   height: 100vh;
+   width: 100vw;
+    position: relative;
     display: block;
-    margin: 23vh 10vw;
-    width: 60vw;
-    @include respond(tab-port) { 
-      width: 75vw; 
+    padding: 10%;
+   &__container {
+      width: 75%;
    }
    &__title {
       text-transform: uppercase;
@@ -183,40 +204,41 @@
  }
 
  .tiles {
+    position: relative;
     display: flex;
     width: 100vw;
    @include respond(tab-port) { display: block; }
    &__browse {
-      width: 70vw;
-      height: 25vh;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      background-color: rgba($color: $color-primary, $alpha: 0.9);
+      // width: 70%;
+      // height: 25vh;
+      // bottom: 0;
+      // left: 0;
+      // position: absolute;
+      // background-color: rgba($color: $color-primary, $alpha: 0.9);
       @include respond(tab-port) { 
-         width: 50vw;
+         width: 50%;
          height: 15vw; 
       }
       &--cta{
-         @include absCenter;
+         // @include absCenter;
          text-transform: uppercase;
          font-size: 1.5em;
          cursor: pointer;
       }
    }
    &__contact {
-      width: 30vw;
-      height: 100vh;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      background-color: rgba($color: $color-primary, $alpha: 0.2);
+      // width: 30%;
+      // height: 100vh;
+      // bottom: 0;
+      // right: 0;
+      // position: absolute;
+      // background-color: rgba($color: $color-primary, $alpha: 0.2);
       @include respond(tab-port) { 
-         width: 50vw;
+         width: 50%;
          height: 15vw; 
       }
       &--cta{
-         @include absCenter;
+         // @include absCenter;
          text-transform: uppercase;
          font-size: 1.5em;
          cursor: pointer;
@@ -225,7 +247,7 @@
  }
 
  .category {
-    @include absCenter;
+   //  @include absCenter;
     width: 70%;
     height: 60%;
     display: flex;
@@ -233,7 +255,7 @@
     flex-wrap: wrap;
    justify-content: space-evenly;
    h1 {
-      @include absCenter;
+      // @include absCenter;
       font-size: 3rem;
       top: -5rem;
    }
@@ -253,7 +275,7 @@
       }
       button {
          padding: 0.5rem 2rem;
-         position: absolute;
+         // position: absolute;
          right: 2rem;
          bottom: 1.5rem;
       }

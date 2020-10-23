@@ -1,21 +1,27 @@
 import Link from 'next/link'
-import WeatherForecast from './WeatherForecast';
+
+const handleScroll = () => {
+    document.getElementById('about').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'}
+    )
+}
 
 const Menu: React.FC = () =>{
     return(
     <menu className='menu'>
-        <WeatherForecast />
         <Link href="/">
-            <a className='menu__item'>Home</a>
+            <a className='menu__logo'onClick={handleScroll}>thehague.fun</a>
         </Link>
-        <Link href="/about">
-            <a className='menu__item'>About</a>
+        <Link href="#about">
+            <a className='menu__item' onClick={handleScroll}>About</a>
         </Link>
-        <Link href="/search">
-            <a className='menu__item'>Search</a>
+        <Link href="#search">
+            <a className='menu__item'onClick={handleScroll}>Search</a>
         </Link>
-        <Link href="/random">
-            <a className='menu__item'>Random</a>
+        <Link href="#contact">
+            <a className='menu__item'onClick={handleScroll}>Contact</a>
         </Link>
     </menu>
     )

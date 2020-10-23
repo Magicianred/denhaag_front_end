@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 
 const contact: React.FC = () => ( 
-    <Layout>
+    <div id='contact'>
         <h1> Contact page </h1>
-    </Layout>
+    </div>
 )
 
 export default contact;

@@ -2,16 +2,15 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 
 const about: React.FC = () => ( 
-    <section className='about'>
+    <section id='about' className='about'>
+        <div className='about__container'>
         <header>
             <h1 className='about__title--bg'>What is this site</h1>
             <h2 className='about__title'>About</h2>
         </header>
         <div className='about__description'>
-        Are you a tourist, expat or a local looking for fun stuff to do in the Hague? 
-        Have you already seen everything and you’d rather want to visit places nearby? 
-        <br/>
-        Maybe just stay at home. We also have something for everyone!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel tenetur id nesciunt laudantium dolor cumque, illum repudiandae laborum architecto aliquid? Nam ullam odio deleniti veniam, repellendus itaque eveniet quasi culpa impedit! Qui dolorem alias magnam? Eius atque minus eveniet, odio repudiandae voluptatem modi adipisci maxime laborum sint ipsum minima quaerat deserunt natus labore asperiores. Odio doloribus voluptatem nobis architecto!
+        </div>
         </div>
         <div className='tiles__contact'>
             <Link href='/contact' >
