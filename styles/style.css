@@ -212,73 +212,43 @@ h1, h2, h3, h4 {
   margin-top: 2%;
   font-size: 1.2em;
   line-height: 1.6em;
-  padding: 1em 2em 1em 0;
+  padding: 1em 5em 1em 0;
 }
 
-.tiles {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.rect__container {
   width: 100vw;
+  height: 100vh;
 }
 
-@media (max-width: 56.25em) {
-  .tiles {
-    display: block;
-  }
-}
-
-@media (max-width: 56.25em) {
-  .tiles__browse {
-    width: 50%;
-    height: 15vw;
-  }
-}
-
-.tiles__browse--cta {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-@media (max-width: 56.25em) {
-  .tiles__contact {
-    width: 50%;
-    height: 15vw;
-  }
-}
-
-.tiles__contact--cta {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.square__container {
-  width: 100vw;
-}
-
-.square--light {
+.rect--cta {
   position: absolute;
-  width: 890.5px;
-  height: 580.61px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.rect--light {
+  position: absolute;
+  width: 65vw;
+  height: 50vh;
   left: 0;
-  top: 580px;
+  top: 0%;
   background: #268CC0;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
 }
 
-.square--dark {
+.rect--dark {
   position: absolute;
-  width: 574px;
-  height: 1355.4px;
-  left: 680.49px;
-  top: 270px;
+  width: 35vw;
+  height: 150vh;
+  left: 65vw;
+  top: -50%;
   background: rgba(38, 140, 192, 0.3);
-  -webkit-transform: rotate(72deg);
-          transform: rotate(72deg);
+  -webkit-transform: rotate(75deg);
+          transform: rotate(75deg);
 }
 
 .categories {
@@ -387,7 +357,7 @@ h1, h2, h3, h4 {
   top: 0;
   position: -webkit-sticky;
   position: sticky;
-  padding: 2rem 5rem;
+  padding: 2rem 10%;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,6 +371,12 @@ h1, h2, h3, h4 {
           justify-content: flex-end;
 }
 
+.menu.scrolled {
+  -webkit-transition: background ease .2s;
+  transition: background ease .2s;
+  background-color: red;
+}
+
 .menu > a {
   color: #e2e3f0;
   text-decoration: none;
@@ -408,7 +384,7 @@ h1, h2, h3, h4 {
 
 .menu__logo {
   position: absolute;
-  left: 15%;
+  left: 10%;
   font-weight: 500;
 }
 
@@ -432,8 +408,8 @@ h1, h2, h3, h4 {
   border-bottom: 2px solid #F8A748;
   width: 0;
   opacity: 0;
-  -webkit-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .menu__item:hover {
@@ -451,10 +427,6 @@ h1, h2, h3, h4 {
 
 .menu__item:active {
   text-decoration: none;
-}
-
-.menu__scrolled {
-  background-color: rgba(0, 4, 36, 0.3);
 }
 
 .contact {

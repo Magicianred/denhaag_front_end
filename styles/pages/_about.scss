@@ -32,74 +32,36 @@
        margin-top: 2%;
        font-size: 1.2em;
        line-height: 1.6em;
-       padding: 1em 2em 1em 0;
+       padding: 1em 5em 1em 0;
     }
   }
 
-  
- .tiles {
-    position: relative;
-    display: flex;
-    width: 100vw;
-   @include respond(tab-port) { display: block; }
-   &__browse {
-      // width: 70%;
-      // height: 25vh;
-      // bottom: 0;
-      // left: 0;
-      // position: absolute;
-      // background-color: rgba($color: $color-primary, $alpha: 0.9);
-      @include respond(tab-port) { 
-         width: 50%;
-         height: 15vw; 
-      }
-      &--cta{
-         // @include absCenter;
-         text-transform: uppercase;
-         font-size: 1.5em;
-         cursor: pointer;
-      }
-   }
-   &__contact {
-      // width: 30%;
-      // height: 100vh;
-      // bottom: 0;
-      // right: 0;
-      // position: absolute;
-      // background-color: rgba($color: $color-primary, $alpha: 0.2);
-      @include respond(tab-port) { 
-         width: 50%;
-         height: 15vw; 
-      }
-      &--cta{
-         // @include absCenter;
-         text-transform: uppercase;
-         font-size: 1.5em;
-         cursor: pointer;
-      }
-   }
- }
 
- .square {
+ .rect {
     &__container {
        width: 100vw;
+       height: 100vh;
+    }
+    &--cta {
+       @include absCenter;
+       display: none;
     }
     &--light {
        position: absolute;
-       width: 890.5px;
-       height: 580.61px;
+       width: 65vw;
+       height: 50vh;
        left: 0;
-       top: 580px;
+       top: 0%;
        background: #268CC0;
-       transform: rotate(30deg);
+       transform: rotate(25deg);
     }
     &--dark {
        position: absolute;
-       width: 574px;
-       height: 1355.4px;
-       left: 680.49px;
-       top: 270px;
+       width: 35vw;
+       height: 150vh;
+       left: 65vw;
+       top: -50%;
        background: rgba(38, 140, 192, 0.3);
-       transform: rotate(72deg);
+       transform: rotate(75deg);
     }
  }

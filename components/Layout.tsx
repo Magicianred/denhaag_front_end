@@ -30,7 +30,7 @@ const Layout: React.FC<Props> = ({
         {children}
       </main>
     <footer>
-    <Contact/>
+      <Contact/>
     </footer>
     </motion.div>
   );
